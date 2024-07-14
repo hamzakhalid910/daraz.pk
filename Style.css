@@ -6,7 +6,7 @@
 .upper-navbar a {
   text-decoration: none;
   color: white;
-  font-size: 11.5px;
+  font-size: 12px;
   margin: 0;
   margin-left: 2%;
   padding: 0;
@@ -36,7 +36,9 @@ body {
 }
 
 .navbar-brand {
-  border: 1px solid;
+  margin-left: 5px;
+  margin-right: 0;
+  padding: 0;
 }
 
 .search-bar {
@@ -61,8 +63,8 @@ body {
   top: 50%;
   transform: translateY(-50%);
   background-color: #ffe1d2;
-  border-radius: 12%;
-  width: 40px;
+  border-radius: 8px;
+  width: 50px;
   height: 28px;
   justify-content: center;
   align-items: center;
@@ -83,10 +85,11 @@ body {
 }
 
 .nav-item .btn img {
-  height: 18px;
-  width: 18px;
+  height: 22px;
+  width: 22px;
   padding: 0;
 }
+
 
 .nav-item .btn {
   display: flex;
@@ -97,11 +100,23 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: 13px;
+  padding: 0;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 .nav-item p {
   margin: 0;
+  margin-left: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+
 }
+
+.nav-item button:hover{
+  background-color: #DF4D05;
+}
+
 
 .dropend-container {
   border: 1px solid rgb(203, 202, 202);
@@ -109,15 +124,34 @@ body {
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 90%;
+  width: 95%;
+  padding-left: 0;
+  /* padding-top: 1px; */
+  /* padding-bottom: 1px; */
+  border: 1px solid green;
 }
 
 .dropend button {
+  display: flex;
   width: 100%;
   border: none;
-  text-align: start;
-  font-size: 12px;
+  font-size: 13px;
   color: #606060;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid ;
+  border-radius: 0;
+  align-content: center;
+padding-left: 3px;
+padding-top: 2.9px;
+padding-bottom: 2.8px;  
+}
+
+.dropend .btn i{
+  width: 20px;
+  border: 1px solid red;
+  justify-content: start;
+  display: flex;
 }
 
 .dropend button:hover,
@@ -146,14 +180,35 @@ body {
   max-height: 100%;
 }
 
+.carousel-control-prev{
+  width: 60px;
+  height: 100px;
+  left: -20px ;
+  top: 120px;
+}
+
+.carousel-control-next{
+  width: 60px;
+  height: 100px;
+  right: -20px ;
+  top: 120px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+background-color: rgb(79, 79, 79);
+opacity: 100px;
+height: 60px;
+width: 25px;
+}
+
 .headlines-container {
   display: flex;
   justify-content: center;
-  background-color: #ffe8de;
+  background-color: #f2e6e0;
   /* margin-left: 10px; */
   /* border-radius: 10px; */
   /* margin-top: 10px; */
-  padding: 0.7% 2%;
+  padding: 7px 7px;
   /* padding: 0; */
   width: 100%;
 }
@@ -325,61 +380,155 @@ body {
 .icon-sl {
   background-position: -402px -96px;
   zoom: 0.332;
-
 }
 
-.icon-mm{
+.icon-mm {
   background-position: -291px -96px;
   zoom: 0.332;
 }
 
-.icon-np{
+.icon-np {
   background-position: -69px -96px;
   zoom: 0.332;
 }
 
-.payment-icon-cod{
+.payment-icon-cod {
   background-position: -98px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
 
-.payment-icon-visa{
+.payment-icon-visa {
   background-position: -267px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
 
-.payment-icon-master{
+.payment-icon-master {
   background-position: -436px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
 
-.payment-icon-easypaisa{
+.payment-icon-easypaisa {
   background-position: -606px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
 
-.payment-icon-daraz-wallet{
+.payment-icon-daraz-wallet {
   background-position: -94px -805px;
-  zoom: .338;
+  zoom: 0.338;
 }
-.payment-icon-jazzcash{
+.payment-icon-jazzcash {
   background-position: -774px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
-.payment-icon-unionpay{
+.payment-icon-unionpay {
   background-position: -940px -682px;
-  zoom: .338;
+  zoom: 0.338;
 }
-.payment-icon-hbl{
-  background-position: -1470px -805px;
-  zoom: .338;
+.payment-icon-hbl {
+  background-position: -1480px -803px;
+  zoom: 0.338;
 }
-.payment-icon-installment{
+.payment-icon-installment {
   background-position: -268px -805px;
-  zoom: .338;
+  zoom: 0.338;
 }
 
+.verified-icon-pci {
+  background-position: -1379px -422px;
+  zoom: 0.33;
+}
 
+.qr-code img {
+  object-fit: contain;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.app-store {
+  background-position: -401px -254px;
+  zoom: 0.331;
+}
+
+.play-store {
+  background-position: -401px -361px;
+  zoom: 0.331;
+}
+
+.huawei-store {
+  background-position: -400px -458px;
+  zoom: 0.328;
+}
+
+.daraz-logo {
+  background-position: -750px -430px;
+  zoom: 0.339;
+}
+
+.happy-shopping {
+  background-position: -902px -460px;
+  zoom: 0.337;
+}
+
+.facebook-logo {
+  background-position: -630px -102px;
+  zoom: 0.39;
+}
+
+.twitter-logo {
+  background-position: -740px -102px;
+  zoom: 0.39;
+}
+
+.instagram-logo {
+  background-position: -847px -101px;
+  zoom: 0.39;
+}
+
+.youtube-logo {
+  background-position: -957px -101px;
+  zoom: 0.39;
+}
+
+.internet-logo {
+  background-position: -1063px -95px;
+  zoom: 0.39;
+}
+
+.footer {
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 0 10px;
+  color: #606060;
+}
+
+.footer h4 {
+  font-size: 18px;
+}
+
+.footer p {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 200;
+  color: #888;
+}
+
+.footer h5 {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  height: 15px;
+  line-height: 15px;
+  display: inline-block;
+  font-size: 12px;
+  color: #888;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
 
 
 @media screen and (max-width: 576px) {
@@ -399,5 +548,9 @@ body {
 
   #bar {
     display: none;
+  }
+
+  .headlines-container{
+    border-radius: 10px;
   }
 }
