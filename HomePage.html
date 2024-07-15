@@ -23,7 +23,43 @@
         <div class="container upper-navbar">
             <a href="#" type="button" style="margin: 0; margin-left: 5px;">Become a Seller</a>
             <a href="#" type="button">Daraz Affiliate Program</a>
-            <a href="#" type="button">Help & Support</a>
+
+            <a href="#" id="helpSupportLink" title="" data-bs-toggle="popover" data-bs-trigger="manual" style="padding-left: 2px; padding-right: 2px;">Help &
+                Support</a>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#helpSupportLink').popover({
+                        html: true,
+                        content: '<div class="popover-content">' +
+                            '<a href="#" class="help"><i class="far fa-question-circle"></i> <p> Help Center</p> </a>' +
+                            '<a href="#" class="chat"><i class="fas fa-comment-dots"></i><p> Chat with Us</p></a>' +
+                            '<a href="#" class="order"><i class="fa-solid fa-boxes-packing"></i><p> Order</p> </a>' +
+                            '<a href="#" class="order"><i class="fas fa-shipping-fast"></i><p> Shipping & Delivery </p></a>' +
+                            '<a href="#" class="order"><i class="fa-solid fa-credit-card"></i><p> Payments</p></a>' +
+                            '<a href="#" class="order"> <i class="fa fa-undo" aria-hidden="true"></i> <p>Returns & Refund</p></a > ' +
+                            '<a href="#" class="order"><i class="fa-solid fa-shield-halved"></i><p> Purchase Protection</p></a>' +
+                            '</div>'
+                    }).on('mouseenter', function () {
+                        var _this = this;
+                        $(this).popover('show');
+                        $('.popover').on('mouseleave', function () {
+                            $(_this).popover('hide');
+                        });
+                    }).on('mouseleave', function () {
+                        var _this = this;
+                        setTimeout(function () {
+                            if (!$('.popover:hover').length) {
+                                $(_this).popover('hide');
+                            }
+                        }, 100);
+                    });
+                });
+            </script>
+
             <a href="#" type="button">Daraz Losgistics Partner</a>
         </div>
 
@@ -114,8 +150,23 @@
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" role="list">
                             <i class="fas fa-shopping-basket"></i> Groceries and Pets
                         </button>
+
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Breakfast, Choco & Snacks</a></li>
+                            <li class="dropend">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Inner dropend
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="">Hey</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li><a class="dropdown-item" href="">Breakfast, Choco & Snacks</a>
+                            </li>
+
+
                             <li><a class="dropdown-item" href="">Beverages</a></li>
                             <li><a class="dropdown-item" href="">Food Staples</a></li>
                             <li><a class="dropdown-item" href="">Laundary & Household</a></li>
@@ -494,8 +545,8 @@
                     </div>
 
                     <div class="category ">
-                        <img src="https://static-01.daraz.pk/p/df83933fb6a952f31f5d98a78d1f3f0d.jpg" alt="">
-                        <p>Suits</p>
+                        <img src="https://static-01.daraz.pk/p/1fde410ea4ddd7e6338e1f6f1b60b62b.jpg" alt="">
+                        <p>Fashion</p>
                     </div>
                 </div>
             </div>
@@ -508,8 +559,8 @@
                     </div>
 
                     <div class="category ">
-                        <img src="https://static-01.daraz.pk/p/df83933fb6a952f31f5d98a78d1f3f0d.jpg" alt="">
-                        <p>Suits</p>
+                        <img src="https://static-01.daraz.pk/p/105aeb7beef4b2980613107d3d1e5058.jpg" alt="">
+                        <p>Art Easels</p>
                     </div>
                 </div>
             </div>
@@ -522,8 +573,8 @@
                     </div>
 
                     <div class="category ">
-                        <img src="https://static-01.daraz.pk/p/df83933fb6a952f31f5d98a78d1f3f0d.jpg" alt="">
-                        <p>Suits</p>
+                        <img src="https://static-01.daraz.pk/p/ae1b9243666342ab18af25e343eb7d54.jpg" alt="">
+                        <p>Wall Decor</p>
                     </div>
                 </div>
             </div>
@@ -660,8 +711,8 @@
                 <div class="products-container">
 
                     <div class="product">
-                        <img src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="">
-                        <p class="product-name">Massage chair with head rest</p>
+                        <img src="https://static-01.daraz.pk/p/5cde6618c2ec79e1f4a3decc71b54efe.jpg" alt="">
+                        <p class="product-name">iPhone 8 64 GD (Non PTA)</p>
                         <p class="discounted-price"> Rs.140000</p>
                         <span style="display: flex; gap: 5px;">
                             <p class="actual-price">Rs.280000 </p>
@@ -670,11 +721,11 @@
                     </div>
 
                     <div class="product">
-                        <img src="https://static-01.daraz.pk/p/1cec35c7b0eee3ccefc6ce63e01dd0e3.jpg" alt="">
-                        <p class="product-name">Air 31 TWS Bluetooth Earbuds</p>
-                        <p class="discounted-price"> Rs.1099</p>
+                        <img src="https://pk-live-21.slatic.net/kf/S73fb6dd4701948acb768a81eeb8d6d51d.jpg" alt="">
+                        <p class="product-name">Chain Strap for Apple Watch</p>
+                        <p class="discounted-price"> Rs.499</p>
                         <span style="display: flex; gap: 5px;">
-                            <p class="actual-price">Rs.2800 </p>
+                            <p class="actual-price">Rs.1800 </p>
                             <p style="font-size: 12px;">-40%</p>
                         </span>
                     </div>
@@ -685,18 +736,20 @@
                 <div class="products-container">
 
                     <div class="product">
-                        <img src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="">
-                        <p class="product-name">Massage chair with head rest</p>
-                        <p class="discounted-price"> Rs.140000</p>
+                        <img src="https://static-01.daraz.pk/p/4321192acef7f3f2c6f1e0de5cc06faa.jpg_400x400q75-product.jpg_.webp"
+                            alt="">
+                        <p class="product-name">Flexible Tripod Stand with mobile holder</p>
+                        <p class="discounted-price"> Rs.240</p>
                         <span style="display: flex; gap: 5px;">
-                            <p class="actual-price">Rs.280000 </p>
+                            <p class="actual-price">Rs.800 </p>
                             <p style="font-size: 12px;">-48%</p>
                         </span>
                     </div>
 
                     <div class="product">
-                        <img src="https://static-01.daraz.pk/p/1cec35c7b0eee3ccefc6ce63e01dd0e3.jpg" alt="">
-                        <p class="product-name">Air 31 TWS Bluetooth Earbuds</p>
+                        <img src="https://static-01.daraz.pk/p/936ba4cc66214d720057aa24c884f5e9.jpg_400x400q75-product.jpg_.webp"
+                            alt="">
+                        <p class="product-name">Portable Neck Fan Rechargable</p>
                         <p class="discounted-price"> Rs.1099</p>
                         <span style="display: flex; gap: 5px;">
                             <p class="actual-price">Rs.2800 </p>
@@ -715,9 +768,9 @@
 
 
             <div class="col-sm-12 col-md-6 col-lg-4" style="padding: 0;">
-                <div class="products-container">
+                <div class="products-container" style="background-color: transparent">
 
-                    <div class="product">
+                    <div class="product" style="margin-right: 10px; background-color: white;">
                         <img src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="">
                         <p class="product-name">Massage chair with head rest</p>
                         <p class="discounted-price"> Rs.140000</p>
@@ -727,7 +780,7 @@
                         </span>
                     </div>
 
-                    <div class="product">
+                    <div class="product" style="margin-right: 10px;">
                         <img src="https://static-01.daraz.pk/p/1cec35c7b0eee3ccefc6ce63e01dd0e3.jpg" alt="">
                         <p class="product-name">Air 31 TWS Bluetooth Earbuds</p>
                         <p class="discounted-price"> Rs.1099</p>
@@ -742,7 +795,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" style="padding: 0;">
                 <div class="products-container">
 
-                    <div class="product">
+                    <div class="product" style="margin-right: 10px;">
                         <img src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="">
                         <p class="product-name">Massage chair with head rest</p>
                         <p class="discounted-price"> Rs.140000</p>
@@ -752,7 +805,7 @@
                         </span>
                     </div>
 
-                    <div class="product">
+                    <div class="product" style="margin-right: 10px;">
                         <img src="https://static-01.daraz.pk/p/1cec35c7b0eee3ccefc6ce63e01dd0e3.jpg" alt="">
                         <p class="product-name">Air 31 TWS Bluetooth Earbuds</p>
                         <p class="discounted-price"> Rs.1099</p>
@@ -767,7 +820,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4" style="padding: 0;">
                 <div class="products-container">
 
-                    <div class="product">
+                    <div class="product" style="margin-right: 10px;">
                         <img src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="">
                         <p class="product-name">Massage chair with head rest</p>
                         <p class="discounted-price"> Rs.140000</p>
@@ -795,6 +848,7 @@
                 <h4>Customer Care</h4>
 
                 <a href="">Help Center</a>
+
                 <a href="">How to Buy
                 </a>
                 <a href="">Corporate & Bulk Purchasing
@@ -954,8 +1008,7 @@
     </div>
 
 
-    <div class="container"
-        style="background-color: #F1F1F1; padding-left: 4.5%; padding-right: 4.5%;">
+    <div class="container" style="background-color: #F1F1F1; padding-left: 4.5%; padding-right: 4.5%;">
         <div class="row" style="padding-top: 10px;">
             <div class="col-md-6 col-lg-3 footer">
                 <h4>How Daraz Transformed Online Shopping in Pakistan</h4>
