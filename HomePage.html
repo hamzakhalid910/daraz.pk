@@ -24,7 +24,8 @@
             <a href="#" type="button" style="margin: 0; margin-left: 5px;">Become a Seller</a>
             <a href="#" type="button">Daraz Affiliate Program</a>
 
-            <a href="#" id="helpSupportLink" title="" data-bs-toggle="popover" data-bs-trigger="manual" style="padding-left: 2px; padding-right: 2px;">Help &
+            <a href="#" id="helpSupportLink" title="" data-bs-toggle="popover" data-bs-trigger="manual"
+                style="padding-left: 2px; padding-right: 2px;">Help &
                 Support</a>
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -108,12 +109,39 @@
                         </li>
 
 
-                        <li class="nav-item lang-icon">
-                            <button class="btn" style="padding: 5px;"> <img
-                                    src="https://img.alicdn.com/imgextra/i2/O1CN01kCOXEJ24smLMboKkc_!!6000000007447-2-tps-72-72.png"
-                                    alt="">
-                                <p>EN</p>
+                        <li class="nav-item dropdown lang-icon">
+                            <button class="btn dropdown-toggle" type="button" id="languageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="padding: 5px;">
+                                <img src="https://img.alicdn.com/imgextra/i2/O1CN01kCOXEJ24smLMboKkc_!!6000000007447-2-tps-72-72.png"
+                                    alt="" width="24" height="24">
+                                <p class="d-inline">EN</p>
                             </button>
+                            <ul class="dropdown-menu language-menu" style="width: 185px; left: -60px; top: 45px;"
+                                aria-labelledby="languageDropdown">
+                                <p style="font-weight: 300;">Select Language</p>
+                                <li class="dropdown-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="language" id="langEs"
+                                            value="ES">
+                                        <label class="form-check-label" for="langUr">
+                                            UR / Urdu
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item language-items">
+                                    <div class="form-check" style="color: #F85606;">
+                                        <input style="border-color: #F85606; background-color: #F85606;"
+                                            class="form-check-input" type="radio" name="language" id="langEn" value="EN"
+                                            checked>
+                                        <label class="form-check-label" for="langEn">
+                                            EN / English
+                                        </label>
+                                    </div>
+                                </li>
+
+
+                                <!-- Add more languages as needed -->
+                            </ul>
                         </li>
 
                         <li class="nav-item">
@@ -408,8 +436,21 @@
             <!-- Carousel -->
             <div class="carousel-container">
                 <div id="caraousel-items" class="carousel slide">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#caraousel-items" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#caraousel-items" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#caraousel-items" data-bs-slide-to="2"></button>
+                    </div>
+
                     <div class="carousel-inner" style="border-radius: 10px;">
                         <div class="carousel-item active">
+                            <img src="https://icms-image.slatic.net/images/ims-web/1ba0ef4c-1df6-4e7b-bc5b-5ca02076f415.jpg"
+                                alt="">
+                        </div>
+                        <div class="carousel-item">
                             <img src="https://icms-image.slatic.net/images/ims-web/72a9e49d-bddb-41c2-b2eb-04df86cb04d9.jpg"
                                 alt="">
                         </div>

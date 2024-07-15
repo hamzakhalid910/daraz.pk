@@ -116,6 +116,11 @@ body {
   display: flex;
 }
 
+
+.language-items:hover{
+  color: #df4d05;
+}
+
 .navbar-toggler {
   margin-right: 2%;
 }
